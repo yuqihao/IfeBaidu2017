@@ -1,0 +1,66 @@
+body
+{
+	padding: 20px;
+	font-size: 15px;
+}	
+.container
+{
+	background-color: #EEE;
+	border:1px solid #999;
+	padding: 20px;
+	min-width: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#group,#intro,#logo
+{
+	background-color: #FFF;
+	border:1px solid #999;
+	
+}
+#group
+{
+	width: 160px;
+	background-color: #fff;
+	float: left;
+	padding: 20px;
+}
+#group img
+{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	float:left;
+	margin-right: 10px;
+}
+
+
+
+
+#intro
+{
+	margin-left: 220px;
+	margin-right: 140px;
+	padding: 20px;
+}
+
+#intro p
+{
+	
+	word-wrap:break-word
+}
+
+#logo
+{
+	width: 120px;
+	background-color:#fff;
+	float: right;
+	border: 1px solid #999;
+}
+#logo img
+{
+	border: 80px;
+	height: 80px;
+	margin: 20px;
+	display: block;
+}
