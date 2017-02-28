@@ -1,0 +1,170 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color:#F3F3F3;
+	font-family: "微软雅黑";
+}
+
+a{
+	text-decoration: none;
+
+}
+#img li
+{
+	list-style-type: none;
+}
+
+#nav
+{
+	position: relative;
+	height: 80px;
+	background-color: #494949;
+}
+#nav a
+{
+	margin:0px;
+	color: white;
+	font-size: 20px;
+	background-color: #1A5B7C;
+	padding: 25px;
+}
+#nav a:hover
+{
+	background-color: #4A728C;
+}
+#nav ul
+{
+	margin:0px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0px;
+	position: absolute;
+	right: 0px;
+}
+#nav h1
+{
+
+	margin:0px;
+	color: white;
+	padding-left: 30px;
+	float: left;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#nav ul li
+{	
+	margin:0px;
+	list-style-type: none;
+	float: left;
+}
+article,#img,#final
+{
+	box-shadow: 3px 3px 1px #AAAAAA;
+	padding: 20px;
+	margin:20px 480px 20px 20px;
+	background-color: #fff;
+	border:1px solid #CBCBCB;
+}
+
+aside{
+	box-shadow: 3px 3px 1px #AAAAAA;
+	padding: 20px;
+	margin:20px;
+	background-color: #fff;
+	border:1px solid #CBCBCB;
+}
+h3
+{
+	font-size: 18px;
+	color: #A1A1A1;
+}
+.zuozhe
+{
+	font-size: 15px;
+	color: #A1A1A1;
+}
+
+#img li
+{
+	border: 1px solid #C4C4C4;
+	margin:10px;
+	text-align: center;
+	padding: 10px;
+	width: 220px;
+		display: inline-block;
+
+}
+
+table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+td,th
+{
+	border-collapse: collapse;
+	border: 1px solid #D1D1D1;
+	padding: 5px;
+}
+table th
+{
+	background-color:  #404040;
+	color: #fff;
+	text-align: left;
+
+}
+table .z
+{
+background-color: #F1F1F1;
+}
+
+
+#submit
+{
+	width: 100%;
+	
+	height: 40px;
+	background-color: #0B8ABF;
+	color: #FFF;
+	border: 0px;
+	border-radius: 5px;
+}
+#submit:hover
+{
+	background-color: #0E7695;
+}
+aside h2{
+	font-size: 18px;
+    height:40px;
+    line-height:30px;
+    padding-left:10px;
+    border-left:3px solid #ccc;
+}
+aside form div{
+    font-size: 14px;
+    margin:15px 0;
+}
+aside form div .tips{
+     float:left;    
+   	 text-align: right;
+  	  width:35%;
+    padding-right:15px;
+}
+aside form div p{
+    margin-left:35%;
+    padding-left:15px;
+    font-size:12px;
+    color: #aaa;
+}
+aside textarea
+{
+	width: 50%;
+	height: 100%;
+}
+aside
+{
+	width: 400px;
+	float: right;
+}
