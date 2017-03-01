@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	button
+	{
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		width: 80px;
+		height: 40px;
+	}
+	button:hover
+	{
+		background-color: #CCC;
+	}
+ul
+{
+	padding: 20px;
+	margin:0;
+}
+ul li
+{
+	
+	padding: 10px;
+	height: auto;
+	margin-right: 10px;
+	background-color: #666;
+	color: #FFF;
+	text-align: center;
+	display: inline;
+}
+input
+{
+	height: 20px;
+	font-size: 18px;
+}
+
+
+</style>
+<body>
+	
+	<input type="text" id="inp">
+
+	<button id="leftIn">左侧入</button>
+	<button id="rightIn">右侧入</button>
+	  
+	<button id="leftOut">左侧出</button>
+	<button id="rightOut">右侧出</button>
+	
+	<span id="num"></span>
+	<ul id="list"> 
+
+	</ul>
+	
+	
+<script>
+	
+
+
+var num=document.getElementById('num');
+var n=0;
+
+function leftIn(){
+
+	var listLi=document.createElement("li");
+	var list=document.getElementById("list");
+	var input=document.getElementById("inp");
+		if(input.value=='')
+		{alert("你还没有输入!");return false; }
+	listLi.innerHTML=input.value;
+	var listChild=list.getElementsByTagName('li');
+	if(listChild.length==0)
+	list.appendChild(listLi);
+	else
+	list.insertBefore(listLi,listChild[0]);
+	input.value=null;
+	n++;
+	num.innerHTML="列表中元素数目："+n;
+}
+
+function rightIn(){
+
+	var listLi=document.createElement("li");
+	var list=document.getElementById("list");
+	var input=document.getElementById("inp");
+	if(input.value=='')
+	{alert("你还没有输入!");return false; }
+	listLi.innerHTML=input.value;
+	list.appendChild(listLi);
+	input.value=null;
+	n++;
+	num.innerHTML="列表中元素数目："+n;
+}
+
+function leftOut(){
+
+	var list=document.getElementById("list");
+	var listChild=list.getElementsByTagName('li');
+	if(listChild.length==0)
+		{alert("列表中没有元素了!");
+		return false;}
+
+	else {
+		list.removeChild(listChild[0]);
+	}	
+	n--;
+	num.innerHTML="列表中元素数目："+n;
+}
+
+
+
+function rightOut(){
+	var list=document.getElementById("list");
+	var listChild=list.getElementsByTagName('li');
+	if(listChild.length==0)
+		{alert("列表中没有元素了!");
+		return false;}
+		
+	else {
+		list.removeChild(listChild[listChild.length-1]);
+	}	
+	n--;
+	num.innerHTML="列表中元素数目："+n;
+
+}
+
+
+
+ function init()
+ {
+
+	document.getElementById("rightIn").onclick=function(){  rightIn();  }
+	document.getElementById("leftIn").onclick=function(){  leftIn();  }
+	document.getElementById("rightOut").onclick=function(){  rightOut();  }
+	document.getElementById("leftOut").onclick=function(){  leftOut();  }
+
+}
+
+init();
+
+</script>
+</body>
+</html>
