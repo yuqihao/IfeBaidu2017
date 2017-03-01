@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	button
+	{
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		width: 80px;
+		height: 40px;
+	}
+	button:hover
+	{
+		background-color: #CCC;
+	}
+ul
+{
+	padding: 20px;
+	margin:0;
+	vertical-align: bottom;
+}
+#list li
+{
+	
+	padding: 10px;
+	width: 20px;
+	
+	margin-right: 10px;
+	background-color: #666;
+	color: #FFF;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+}
+
+input
+{
+	height: 20px;
+	font-size: 18px;
+}
+
+
+</style>
+<body>
+	
+	<input type="text" id="inp" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="return false" placeholder="请输入数字">
+
+	<button id="leftIn">左侧入</button>
+	<button id="rightIn">右侧入</button>
+	  
+	<button id="leftOut">左侧出</button>
+	<button id="rightOut">右侧出</button>
+	<button id="sort1">冒泡排序</button>
+	<button id="sort2">选择排序</button>
+	<span id="num"></span>
+	<ul id="list">
+		
+	</ul>
+	
+	
+<script>
+	
+
+
+var num=document.getElementById('num');
+var n=0;
+
+
+function leftIn(){
+
+	var listLi=document.createElement("li");
+	var list=document.getElementById("list");
+	var input=document.getElementById("inp");
+		if(input.value=='')
+		{alert("你还没有输入!");return false; }
+	if(input.value<10||input.value>100)
+	{
+		alert("请输入10-100的数字");input.value='';return false;
+	}
+
+	listLi.innerHTML=input.value;
+	listLi.style.height=input.value+"px";
+	listLi.style.top=(100-input.value)+"px";
+	var listChild=list.getElementsByTagName('li');
+	if(listChild.length==0)
+	list.appendChild(listLi);
+	else
+	list.insertBefore(listLi,listChild[0]);
+
+
+	input.value=null;
+	n++;
+	num.innerHTML="列表中元素数目："+n;
+}
+
+function rightIn(){
+
+	var listLi=document.createElement("li");
+	var list=document.getElementById("list");
+	var input=document.getElementById("inp");
+	if(input.value=='')
+	{alert("你还没有输入!");return false; }
+	if(input.value<10||input.value>99)
+	{
+		alert("请输入10-99的数字");input.value='';return false;
+	}
+	listLi.innerHTML=input.value;
+	listLi.style.height=input.value+"px";
+	listLi.style.top=(100-input.value)+"px";
+	list.appendChild(listLi);
+	input.value=null;
+	n++;
+	num.innerHTML="列表中元素数目："+n;
+}
+
+function leftOut(){
+
+	var list=document.getElementById("list");
+	var listChild=list.getElementsByTagName('li');
+	if(listChild.length==0)
+		{alert("列表中没有元素了!");
+		return false;}
+
+	else {
+		list.removeChild(listChild[0]);
+	}	
+	n--;
+	num.innerHTML="列表中元素数目："+n;
+}
+
+
+
+function rightOut(){
+	var list=document.getElementById("list");
+	var listChild=list.getElementsByTagName('li');
+	if(listChild.length==0)
+		{alert("列表中没有元素了!");
+		return false;}
+		
+	else {
+		list.removeChild(listChild[listChild.length-1]);
+	}	
+	n--;
+	num.innerHTML="列表中元素数目："+n;
+
+}
+
+function xuanze()
+{
+
+	var list=document.getElementById("list");
+	var listChild=list.getElementsByTagName("li");
+	var num=listChild.length;
+
+	var i=0,minIndex=0,minValue=listChild[0].style.height,j=0;
+	alert(minValue);
+	timer=setInterval(run,100);
+	function run(){
+		if(j<num-1)
+		{
+
+
+		if(i<num)
+		{
+			if(listChild[i].style.height<minValue)
+			{
+				minValue=listChild[i].style.height;
+				minIndex=i;
+				
+			}
+			i++;
+		}
+		else
+		{
+			list.insertBefore(listChild[minIndex],listChild[j]);
+			j++;
+			i=j;
+			minIndex=i;
+			minValue=listChild[i].style.height;
+		}
+		
+		
+
+		}
+		else
+			{
+				clearInterval(timer);
+				return;
+			}
+	
+
+
+
+	}	
+	
+}
+
+function maopao()
+{
+
+	var list=document.getElementById("list");
+	var listChild=list.getElementsByTagName("li");
+	var num=listChild.length;
+	// for(var i=0;i<num-1;i++)
+	// {
+
+	// 	//alert(listChild[i].style.height);
+	// 	for(var j=1;j<num-i;j++)
+	// 	{
+			
+	// 		if(listChild[j-1].style.height>listChild[j].style.height)
+	// 		{
+		
+	// 			list.insertBefore(listChild[j],listChild[j-1]);
+	// 			alert("1");
+	// 		}
+	// 	}
+	// }
+	var i=0,j=1;
+	timer=setInterval(run,100);
+	function run(){
+		if(i<num-1)
+		{
+			if(j<num-i)
+			{
+				if(listChild[j-1].style.height>listChild[j].style.height)
+				{
+					list.insertBefore(listChild[j],listChild[j-1]);
+				}
+				j++;
+			}
+			else
+			{
+				i++;j=1;
+			}
+
+		}
+		else
+			{
+				clearInterval(timer);
+				return;
+			}
+	}
+}
+
+ function init()
+ {
+
+	document.getElementById("rightIn").onclick=function(){  rightIn();  }
+	document.getElementById("leftIn").onclick=function(){  leftIn();  }
+	document.getElementById("rightOut").onclick=function(){  rightOut();  }
+	document.getElementById("leftOut").onclick=function(){  leftOut();  }
+	document.getElementById("sort1").onclick=function(){  maopao();  }
+	document.getElementById("sort2").onclick=function(){  xuanze();  }
+}
+
+init();
+
+</script>
+</body>
+</html>
