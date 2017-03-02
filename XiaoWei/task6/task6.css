@@ -1,0 +1,353 @@
+*
+{
+	padding: 0px;
+	margin:0px;
+	font-family: "黑体";
+}
+body
+{
+	background-color: #F9F9F9;
+	overflow:scroll;
+}
+#con
+{	padding:0px 44px; 
+	background-color: #FFF;
+	width: 892px;
+	height: 1480px;
+	position: absolute;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+}
+#red
+{
+	width: 110px;
+	height: 61px;
+	background-color: #D45D5C;
+	position:relative;
+}
+#red p
+{
+	color: white;
+	font-size: 12px;
+	position: absolute;
+	bottom: 3px;
+}
+#date
+{
+	color: #D45D5C;
+	font-size: 12px;
+	position: absolute;
+	right: 44px;
+	top: 46px;
+	
+}
+#img
+{
+	position: relative;
+	top: 44px;
+	width: 641px;
+	height: 301px;
+	display: inline-block;
+	border:1px solid black;
+}
+#img #red
+{
+	position: absolute;
+	background-color: red;
+	width: 191px;
+	height: 301px;
+	opacity: 0.5;
+	top: 0;
+	right: 0;
+}
+#img #green
+{
+	position: absolute;
+	background-color: green;
+	width: 191px;
+	height: 301px;
+	opacity: 0.5;
+	top: 0;
+
+}
+#img-right
+{
+	float: right;
+	width: 217px;
+	height: 301px;
+	display: inline-block;
+	margin:44px 0px;
+}
+#img-right .i
+{
+	font-size: 24px;
+	color: black;
+	font-family: "微软雅黑";
+
+}
+#img-right .i:first-letter
+{
+	font-size: 30px;
+}
+#img-right .xi
+{
+	font-size: 12px;
+	color: #676767;
+	font-family: "楷体";
+}
+#img-right i
+{
+	font-size: 116px;
+	color: #75b86b;
+	font-family: "微软雅黑";
+	position: relative;
+	left: -20px;
+	top: -10px;
+}
+#img-right #cs2
+{
+
+	float: left;
+}
+[id^=cs]
+{
+	position: relative;
+	top: -20px;
+	
+}
+#cs1,#cs2
+{
+	position: relative;
+	top: -75px;
+	left: 90px;
+}
+#art
+{	position: absolute;
+	top: 450px;
+	height: 270px;
+	width: 645px;
+	display: block;
+}
+#art article
+{
+	float: left;
+	font-size: 12px;
+	width: 200px;
+	display: inline-block;
+	margin-right: 15px;
+	opacity: 0.7
+}
+#art article h4
+{
+	font-size: 20px;
+	color: #EF5252;
+}
+.what
+{
+	line-height: 20px;
+	font-size: 18px;
+	margin-top: 12px;
+	margin-left: 4px;
+}
+#left-down
+{
+	position: absolute;
+	top: 680px;
+}
+#left-down div p
+{
+	color: #11456b;
+	font-family: "黑体";
+	margin-bottom: 10px;
+}
+#left-down div #span1
+{
+	font-size: 72px;
+	font-style: italic;
+	color: #f5e327;
+	margin-right: 10px;
+}
+#left-down div article
+{
+	margin-top: 20px;
+	width: 380px;
+}
+#left-down div #span2
+{
+	font-size: 70px;
+	float:left;
+	color: #f5e327;
+	margin:0 10px 0px 0;
+}
+#left-down img
+{
+	float: right;
+	position: relative;
+ 	margin:10px;
+}
+
+#right-down #first
+{
+	position: absolute;
+	top: 700px;
+	right: 44px;
+	width:458px;
+	height: 257px;
+}
+#right-down .grey
+{
+	position: absolute;
+	opacity: 0.4;
+	background-color: black;
+	width: 458px;
+	height: 60px;
+	bottom: 0px;
+}
+#right-down h4
+{
+	color: #FFF;
+	font-size: 20px;
+	position: absolute;
+	bottom: 0;
+	font-size: 26px;
+	line-height: 40px;
+	margin:10px 0 10px 0px;
+	padding: 0 0 0 8px;
+	left: 40px;
+	border-left: 3px solid #72b16a;
+}
+#right-down #first p
+{
+	position: absolute;
+	bottom: 18px;
+	font-size: 12px;
+	font-style: italic;
+	color: #72b16a;
+	left: 160px;
+}
+#right-down #next
+{
+	position: absolute;
+	top: 957px;
+	right: 44px;
+	width:458px;
+	height: 380px;
+	margin-top: 40px;
+	background-color: #eeedd6;
+
+}
+#right-down #next p
+{
+	
+	margin-top: 19px;
+	font-size: 16px;
+	margin-left: 15px;
+}
+#right-down #next p span
+{
+	
+
+	font-size: 14px;
+	font-style: italic;
+}
+#right-down #next img
+{
+	position: absolute;
+	top: 19px;
+}
+#right-down #next .first
+
+{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+#right-down #next .red
+{
+	background-color: #d45d5c;
+	position: absolute;
+	bottom: 0;
+	width: 260px;
+	height: 160px;
+}
+.red h3
+{
+	color: #FFF;
+	height: 80px;
+	line-height: 80px;
+	width: 60px;
+	border-right:2px solid #FFF;
+	font-size:110px;
+	font-family: "黑体";
+	position: absolute;
+	top: 40px;
+	left: 20px;
+}
+.red p
+{
+	color: #fff;
+	font-family: "黑体";
+}
+#right-down .red .p1
+{
+	
+	font-style: italic;
+	position: absolute;
+	top: 20px;
+	left: 80px;
+
+}
+#right-down .red .p2
+{
+	
+	position: absolute;
+	top: 70px;
+	left: 80px;
+	
+
+}
+
+
+#right-down #next .finally span
+{
+	font-family: "黑体";
+	font-size: 72px;
+	color: #d45d5c;
+	
+
+}
+#right-down #next .finally p
+{
+	font-family: "黑体";
+	font-size: 14px;
+	color: #d45d5c;
+	font-style: italic;
+	text-indent:3em;
+}
+#right-down #next .finally
+{
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+	width: 200px;
+	left: 260px;
+
+}
+
+#right-down #next .finally .span1
+{
+	display: block;
+	
+	position: absolute;
+	left: -20px;
+
+}
+#right-down #next .finally .span2
+{
+	display: block;
+	right: -10px;
+	top: 80px;
+	position: absolute;
+}
