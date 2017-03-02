@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="task1.css">
+</head>
+<body>
+
+<div>
+	<div id="form1">
+		<p>名称</p>
+		<input type="text" id="input1" placeholder="输入名称" onkeydown="function(){verify()}">
+		
+		<p id="remind">必填，长度为4——16个字符</p>
+		<button>验证</button>
+	<div>
+
+<!-- 	<form id="form2">
+		<p>名称</p>
+		<input type="text">
+		<button>验证</button>
+		<p id="remind">必填，长度为4~16个字符</p>
+	</form>
+
+	<form id="form3">
+		<p>名称</p>
+		<input type="text">
+		<button>验证</button>
+		<p id="remind">必填，长度为4~16个字符</p>
+	</form> -->
+</div>
+
+<script>
+
+
+function verify(){
+	var input1=document.getElementById("input1");
+	var remind=document.getElementById("remind");
+	var inputValue=input1.value;
+	var len=0;
+	for(var i=0;i<inputValue.length;i++)
+	{
+		if(inputValue.charCodeAt(i)>256) 
+		len+=2;
+		else 
+		len++;
+	}
+	
+
+	if (len>=4&&len<=16) 
+	{
+
+		input1.style.border="1px solid #58A311";
+		remind.style.color="#58a311";
+		remind.innerHTML="名称格式正确";
+	}
+	else if (len==0) 
+	{
+
+		input1.style.border="1px solid red";
+		remind.style.color="red";
+		remind.innerHTML="姓名不能为空";
+	}
+	else
+	{
+		input1.style.border="1px solid red";
+		remind.style.color="red";
+		remind.innerHTML="名称格式错误";
+	}
+
+}	
+
+function init()
+{ 
+
+	var input1=document.getElementById("input1");
+	document.getElementsByTagName("button")[0].onclick=function(){ verify();}; 
+	input1.onkeydown=function(e)
+	{ 
+	
+		if (e.keyCode==13) {
+			document.getElementsByTagName("button")[0].click();
+		}
+	}; 
+}
+
+
+init();
+</script>
+
+</body>
+</html>
