@@ -1,0 +1,41 @@
+.name
+{
+	font-size: 20px;
+	display: inline-block;
+	margin-right:10px;
+	text-align: right;
+	width: 30%;
+	margin-top: 0px;
+	
+}
+input
+{
+	width: 300px;
+	height: 30px;
+	border-radius: 5px;
+	border:1px solid #aaa;
+/*	box-shadow: 0px 0px 10px #ccc;*/
+}
+.remind
+{
+	font-size: 12px;
+	color: #CCC;
+	margin-left: 31%;
+	display: none;
+	margin-top: 0;
+}
+button
+{
+	margin-left: 50%;
+	width: 100px;
+	height: 40px;
+	border-radius: 8px;
+	color: #FFF;
+	background-color: #3A548F;
+	border: none;
+	cursor: pointer;
+}
+button:hover
+{
+	background-color: #1697CC;
+}
