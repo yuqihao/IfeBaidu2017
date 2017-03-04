@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+    window.onload = function() {
+        var sel = document.getElementById("mySelect");
+        if(sel&&sel.addEventListener){
+            sel.addEventListener('change',function(e){
+                var ev = e||window.event;
+                var target = ev.target||ev.srcElement;
+                alert(target.value);
+            },false)
+        }
+    }
+</script>
+</head>
+<body>
+
+<form>
+Select your favorite fruit:
+<select id="mySelect">
+  <option value="20">Apple</option>
+  <option value="30">Orange</option>
+  <option value="40">Pineapple</option>
+  <option value="50">Banana</option>
+</select>
+<br /><br />
+<input type="button" value="Alert index of selected option">
+</form>
+
+</body>
+</html>

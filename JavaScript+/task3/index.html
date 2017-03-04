@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="task3.css">
+</head>
+<body>
+
+	<input type="radio" id="student" name="s"><label for="student">在校生</label>
+	<input type="radio" id="noStudent" name="s"><label for="noStudent">非在校生</label>
+
+
+	<div id="select" style="display: none">
+	<label for="school">学校</label>
+	<select name="province" id="province" style="width: 160px;height: 30px">
+		<option value="zhejiang">浙江</option>
+		<option value="jiangsu">江苏</option>
+	</select>
+
+	<select name="school" id="zhejiang" style="width: 160px;height: 30px;display: inline">
+		<option value="">浙江大学</option>
+		<option value="">浙江工业大学</option>
+	</select>
+
+	<select name="school" id="jiangsu" style="width: 160px;height: 30px;display: none">
+		<option value="">南京大学</option>
+		<option value="">江苏大学</option>
+	</select>
+	</div>
+
+	<div id="company" style="display: none">
+		<label for="com">就业单位</label><input type="text" id="com" style="width: 260px;height: 30px">
+	</div>
+
+
+<script src="task3.js"></script>
+</body>
+</html>
