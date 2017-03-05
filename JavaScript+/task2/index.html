@@ -155,7 +155,15 @@ function verify3()
 	var remind=document.getElementsByClassName("remind")[2];
 	var inputValue=input.value;
 	input.i=0;
-	if(inputValue==password)
+	if(inputValue.length==0)
+	{
+		input.style.border="1px solid red";
+		remind.style.color="red";
+		remind.innerHTML="密码不能为空";
+		remind.style.display="block";
+		input.style.boxShadow="0 0 5px red";
+	}
+	else if(inputValue==password)
 	{
 		input.style.border="1px solid #58A311";
 
@@ -171,6 +179,7 @@ function verify3()
 		remind.style.color="red";
 		remind.innerHTML="两次密码不一致";
 		remind.style.display="block";
+		input.style.boxShadow="0 0 5px red";
 	}
 	
 }
@@ -254,7 +263,7 @@ function init()
 		{
 			
 			if(input[i].i==0)
-				boo==0;
+				boo=0;
 		}
 		if(boo==0)
 		{
