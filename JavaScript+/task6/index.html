@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task6</title>
+</head>
+<style type="text/css">
+ #login
+ {
+    cursor: pointer;
+    height: 60px;
+    background-color: #09967B;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: #FFf;
+ }   
+ #login:hover
+ {
+    background-color: #0F7C96;
+ }
+
+ #floatLayer
+ {
+    width: 400px;
+    height: 200px;
+    background-color:  #09967B;
+    border-radius: 10px;
+   /* position: fixed;
+    margin: auto;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;*/
+ }
+  #floatLayer label
+  {
+    margin: 5px;
+    display: block;
+  }
+    #floatLayer input
+  {
+    margin: 5px;
+   
+  }
+   #floatLayer h2
+{
+ 
+    border-radius: 10px 10px 0 0px;
+    margin: 0px;
+    padding: 10px;
+    background-color:  #2981BA;
+    cursor: move;
+}
+</style>
+<body>
+    
+    <div id="login">登录</div>
+    
+    <div id="floatLayer">
+        <h2>登录</h2>
+
+        <label for="username">用户名</label>
+        <input type="text" id="username">
+       
+        <label for="password">密码</label>
+        <input type="text" id="password">
+
+        <input type="button" value="确定" id="btnSure">
+        <input type="button" value="取消" id="btnCancel">
+    </div>
+  <script type="text/javascript" src="public.js"></script>
+    <script type="text/javascript" src="floatLayer.js"></script>
+</body>
+</html>
