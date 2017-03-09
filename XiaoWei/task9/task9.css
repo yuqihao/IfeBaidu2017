@@ -61,10 +61,12 @@
 	width: 1280px;
 	height: 1213px;
 	background-color: #B7B7B7;
-	position: absolute;
+  position: relative;  
+ 
 	top: 57px;
-	left: 50%;
-	transform: translate(-50%,0);
+
+  margin: 0 auto;
+
 }
 #nav
 {
@@ -179,7 +181,7 @@
 	position: absolute;
 	left: 261px;
 	background-color: #eeeeed;
-	width: 1019px;
+	width: 1020px;
 	 height: 1213px;
 }
 #content .index
