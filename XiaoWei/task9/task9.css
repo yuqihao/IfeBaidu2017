@@ -8,6 +8,9 @@
 	background-color: #2189bf;
 	height:57px;
 	position: absolute; 
+  left: 0;
+  right: 0;
+  min-width: 1280px;
 }
 #head .logo
 {
@@ -40,7 +43,7 @@
 {
 
   position: absolute;
- right: 170px;
+  right: 170px;
   top: 20px;
 }
 #head span
