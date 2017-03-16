@@ -4,7 +4,10 @@ html, body {
 
 
 
-
+.outer {
+  box-sizing: border-box;
+  float: left;
+  padding: 10px; }
 
 .inner {
   height: 50px;
