@@ -1,6 +1,7 @@
 *{
 	padding: 0;
 	margin: 0;
+  font-family: "黑体";
 }
 #head
 {
@@ -461,7 +462,7 @@
   width: 70px;
   height: 48px;
   position: relative;
-  top: -40px;
+  top: -32px;
   left: 90px;
 
 }
