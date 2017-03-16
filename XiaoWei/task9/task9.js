@@ -43,4 +43,11 @@ $(function(){
 			$(this).find('img:eq(0)').attr('src', 'img/greyDoc.png');
 		
 	});
+
+
+	$("#content .item4 li").click(function(event) {
+		/* Act on the event */
+		$(this).siblings().removeClass('sel');
+		$(this).addClass('sel');
+	});
 });
